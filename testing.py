@@ -11,6 +11,7 @@ scores = np.array([14.6, 20.4, 30.1, 33.9, 34.6, 45.7, 43.8, 52.3, 62.6, 63.9,
                         97.9, 84.4, 70.0, 90.5]).reshape(-1, 1)
 
 model = LinearRegression()
+# use 20 percent of data to test model
 time_train, time_test, score_train, score_test = train_test_split(time_studied, scores, test_size = 0.2)
 model.fit(time_train, score_train)
 print(model.score(time_test, score_test))
